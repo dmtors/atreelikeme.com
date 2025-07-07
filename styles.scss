@@ -1,0 +1,158 @@
+// Variables
+
+// Color
+$color-light: #f1efe3;
+$color-dark: #33402b;
+$color-highlight: #fbff2b;
+
+// Font
+$font-serif: "EB Garamond", serif;
+
+// Global
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: $font-serif;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    &::selection {
+        background-color: $color-highlight;
+        color: $color-dark;
+    }
+}
+
+body {
+    display: grid;
+    gap: 15px;
+    padding: 0 30px 50px;
+}
+
+// Theme
+@mixin theme-light() {
+    color-scheme: light;
+    color: $color-dark;
+    background-color: $color-light;
+    *:focus-visible {
+        outline-color: $color-dark;
+    }
+    a {
+        color: $color-dark;
+    }
+    button {
+        background-color: $color-dark;
+        color: $color-light;
+        &:hover {
+            background-color: darken($color-dark, 5%);
+            &:disabled {
+                background-color: $color-dark;
+            }
+        }
+        &:active {
+            background-color: darken($color-dark, 10%);
+            &:disabled {
+                background-color: $color-dark;
+            }
+        }
+    }
+}
+@mixin theme-dark() {
+    color-scheme: dark;
+    color: $color-light;
+    background-color: $color-dark;
+    *:focus-visible {
+        outline-color: $color-light;
+    }
+    a {
+        color: $color-light;
+    }
+    button {
+        background-color: $color-light;
+        color: $color-dark;
+        &:hover {
+            background-color: lighten($color-light, 5%);
+            &:disabled {
+                background-color: $color-dark;
+            }
+        }
+        &:active {
+            background-color: lighten($color-light, 10%);
+            &:disabled {
+                background-color: $color-dark;
+            }
+        }
+    }
+}
+  
+html,
+html[data-theme="light"] {
+    @include theme-light;
+}
+html[data-theme="dark"] {
+    @include theme-dark;
+}
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) {
+        @include theme-dark;
+    }
+}
+
+// Type
+
+h1 {
+    font-size: 35px;
+    font-style: italic;
+    text-align: center;
+}
+
+p {
+    width: 100%;
+    max-width: 60ch;
+    margin: 0 auto;
+    text-align: left;
+}
+
+// Components
+
+nav {
+    text-align: center;
+    display: flex;
+    gap: 15px;
+    margin: 15px auto;
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1px;
+    &:hover {
+        text-decoration: none;
+    }
+    &:active {
+        opacity: 0;
+    }
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+button {
+    cursor: pointer;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 15px auto;
+    &:disabled {
+        cursor: default;
+        opacity: 0.7;
+    }
+}
+
+img {
+    width: calc(100% + 60px);
+    mix-blend-mode: luminosity;
+    margin-left: -30px;
+    margin-bottom: 30px;
+}

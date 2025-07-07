@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "EB Garamond", serif;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 400;
+}
+*::-moz-selection {
+  background-color: #fbff2b;
+  color: #33402b;
+}
+*::selection {
+  background-color: #fbff2b;
+  color: #33402b;
+}
+
+body {
+  display: grid;
+  gap: 15px;
+  padding: 0 30px 50px;
+}
+
+html,
+html[data-theme=light] {
+  color-scheme: light;
+  color: #33402b;
+  background-color: #f1efe3;
+}
+html *:focus-visible,
+html[data-theme=light] *:focus-visible {
+  outline-color: #33402b;
+}
+html a,
+html[data-theme=light] a {
+  color: #33402b;
+}
+html button,
+html[data-theme=light] button {
+  background-color: #33402b;
+  color: #f1efe3;
+}
+html button:hover,
+html[data-theme=light] button:hover {
+  background-color: #273121;
+}
+html button:hover:disabled,
+html[data-theme=light] button:hover:disabled {
+  background-color: #33402b;
+}
+html button:active,
+html[data-theme=light] button:active {
+  background-color: #1b2117;
+}
+html button:active:disabled,
+html[data-theme=light] button:active:disabled {
+  background-color: #33402b;
+}
+
+html[data-theme=dark] {
+  color-scheme: dark;
+  color: #f1efe3;
+  background-color: #33402b;
+}
+html[data-theme=dark] *:focus-visible {
+  outline-color: #f1efe3;
+}
+html[data-theme=dark] a {
+  color: #f1efe3;
+}
+html[data-theme=dark] button {
+  background-color: #f1efe3;
+  color: #33402b;
+}
+html[data-theme=dark] button:hover {
+  background-color: #faf9f4;
+}
+html[data-theme=dark] button:hover:disabled {
+  background-color: #33402b;
+}
+html[data-theme=dark] button:active {
+  background-color: white;
+}
+html[data-theme=dark] button:active:disabled {
+  background-color: #33402b;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    color-scheme: dark;
+    color: #f1efe3;
+    background-color: #33402b;
+  }
+  html:not([data-theme]) *:focus-visible {
+    outline-color: #f1efe3;
+  }
+  html:not([data-theme]) a {
+    color: #f1efe3;
+  }
+  html:not([data-theme]) button {
+    background-color: #f1efe3;
+    color: #33402b;
+  }
+  html:not([data-theme]) button:hover {
+    background-color: #faf9f4;
+  }
+  html:not([data-theme]) button:hover:disabled {
+    background-color: #33402b;
+  }
+  html:not([data-theme]) button:active {
+    background-color: white;
+  }
+  html:not([data-theme]) button:active:disabled {
+    background-color: #33402b;
+  }
+}
+h1 {
+  font-size: 35px;
+  font-style: italic;
+  text-align: center;
+}
+
+p {
+  width: 100%;
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: left;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  margin: 15px auto;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  opacity: 0;
+}
+a:visited {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 15px auto;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+img {
+  width: calc(100% + 60px);
+  mix-blend-mode: luminosity;
+  margin-left: -30px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=styles.css.map */
