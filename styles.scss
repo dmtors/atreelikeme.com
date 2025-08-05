@@ -74,13 +74,13 @@ body {
         &:hover {
             background-color: lighten($color-light, 5%);
             &:disabled {
-                background-color: $color-dark;
+                background-color: $color-light;
             }
         }
         &:active {
             background-color: lighten($color-light, 10%);
             &:disabled {
-                background-color: $color-dark;
+                background-color: $color-light;
             }
         }
     }

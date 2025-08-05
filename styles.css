@@ -78,13 +78,13 @@ html[data-theme=dark] button:hover {
   background-color: #faf9f4;
 }
 html[data-theme=dark] button:hover:disabled {
-  background-color: #33402b;
+  background-color: #f1efe3;
 }
 html[data-theme=dark] button:active {
   background-color: white;
 }
 html[data-theme=dark] button:active:disabled {
-  background-color: #33402b;
+  background-color: #f1efe3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,13 +107,13 @@ html[data-theme=dark] button:active:disabled {
     background-color: #faf9f4;
   }
   html:not([data-theme]) button:hover:disabled {
-    background-color: #33402b;
+    background-color: #f1efe3;
   }
   html:not([data-theme]) button:active {
     background-color: white;
   }
   html:not([data-theme]) button:active:disabled {
-    background-color: #33402b;
+    background-color: #f1efe3;
   }
 }
 h1 {
