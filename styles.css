@@ -44,7 +44,7 @@ html[data-theme=light] button {
 }
 html button:hover,
 html[data-theme=light] button:hover {
-  background-color: #273121;
+  background-color: rgb(38.8457943925, 48.7476635514, 32.7523364486);
 }
 html button:hover:disabled,
 html[data-theme=light] button:hover:disabled {
@@ -52,7 +52,7 @@ html[data-theme=light] button:hover:disabled {
 }
 html button:active,
 html[data-theme=light] button:active {
-  background-color: #1b2117;
+  background-color: rgb(26.691588785, 33.4953271028, 22.5046728972);
 }
 html button:active:disabled,
 html[data-theme=light] button:active:disabled {
@@ -75,7 +75,7 @@ html[data-theme=dark] button {
   color: #33402b;
 }
 html[data-theme=dark] button:hover {
-  background-color: #faf9f4;
+  background-color: rgb(249.5, 248.7142857143, 244);
 }
 html[data-theme=dark] button:hover:disabled {
   background-color: #f1efe3;
@@ -104,7 +104,7 @@ html[data-theme=dark] button:active:disabled {
     color: #33402b;
   }
   html:not([data-theme]) button:hover {
-    background-color: #faf9f4;
+    background-color: rgb(249.5, 248.7142857143, 244);
   }
   html:not([data-theme]) button:hover:disabled {
     background-color: #f1efe3;
@@ -117,7 +117,7 @@ html[data-theme=dark] button:active:disabled {
   }
 }
 h1 {
-  font-size: 35px;
+  font-size: 55px;
   font-style: italic;
   text-align: center;
 }
@@ -133,7 +133,7 @@ nav {
   text-align: center;
   display: flex;
   gap: 15px;
-  margin: 15px auto;
+  margin: 30px auto 15px;
 }
 
 a {
@@ -166,7 +166,6 @@ button:disabled {
 
 img {
   width: calc(100% + 60px);
-  mix-blend-mode: luminosity;
   margin-left: -30px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }/*# sourceMappingURL=styles.css.map */
