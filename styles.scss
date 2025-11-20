@@ -1,9 +1,9 @@
 // Variables
 
 // Color
-$color-light: #f1efe3;
-$color-dark: #33402b;
-$color-highlight: #fbff2b;
+$color-light: #ece4b3;
+$color-dark: #19120B;
+$color-highlight: #f7f200;
 
 // Font
 $font-serif: "EB Garamond", serif;
@@ -41,21 +41,9 @@ body {
     a {
         color: $color-dark;
     }
-    button {
+    .button {
         background-color: $color-dark;
         color: $color-light;
-        &:hover {
-            background-color: darken($color-dark, 5%);
-            &:disabled {
-                background-color: $color-dark;
-            }
-        }
-        &:active {
-            background-color: darken($color-dark, 10%);
-            &:disabled {
-                background-color: $color-dark;
-            }
-        }
     }
 }
 @mixin theme-dark() {
@@ -68,21 +56,9 @@ body {
     a {
         color: $color-light;
     }
-    button {
+    .button {
         background-color: $color-light;
         color: $color-dark;
-        &:hover {
-            background-color: lighten($color-light, 5%);
-            &:disabled {
-                background-color: $color-light;
-            }
-        }
-        &:active {
-            background-color: lighten($color-light, 10%);
-            &:disabled {
-                background-color: $color-light;
-            }
-        }
     }
 }
   
@@ -107,6 +83,14 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 20px;
+    width: 100%;
+    max-width: 60ch;
+    margin: 0 auto;
+    text-align: left;
+}
+
 p {
     width: 100%;
     max-width: 60ch;
@@ -125,7 +109,7 @@ nav {
 
 a {
     text-decoration: underline;
-    text-underline-offset: 10px;
+    text-underline-offset: 6px;
     text-decoration-thickness: 1px;
     &:hover {
         text-decoration: none;
@@ -138,21 +122,34 @@ a {
     }
 }
 
-button {
+.button {
     cursor: pointer;
     width: fit-content;
     padding: 10px 15px;
     border-radius: 5px;
     margin: 15px auto;
-    &:disabled {
+    text-decoration: none;
+    &:hover {
+            background-color: $color-highlight;
+            color: $color-dark;
+        }
+        &:active {
+            background-color: darken($color-highlight, 10%);
+            opacity: 1;
+        }
+    &.disabled {
         cursor: default;
+        pointer-events: none;
         opacity: 0.7;
     }
 }
 
 img {
     width: calc(100% + 60px);
-    mix-blend-mode: luminosity;
     margin-left: -30px;
     margin-bottom: 30px;
+}
+
+iframe {
+    border-radius: 30px;
 }
