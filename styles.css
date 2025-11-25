@@ -42,6 +42,10 @@ html[data-theme=light] .button {
   background-color: #19120B;
   color: #ece4b3;
 }
+html #book-picture,
+html[data-theme=light] #book-picture {
+  mix-blend-mode: multiply;
+}
 
 html[data-theme=dark] {
   color-scheme: dark;
@@ -57,6 +61,9 @@ html[data-theme=dark] a {
 html[data-theme=dark] .button {
   background-color: #ece4b3;
   color: #19120B;
+}
+html[data-theme=dark] #book-picture {
+  mix-blend-mode: screen;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,6 +81,9 @@ html[data-theme=dark] .button {
   html:not([data-theme]) .button {
     background-color: #ece4b3;
     color: #19120B;
+  }
+  html:not([data-theme]) #book-picture {
+    mix-blend-mode: screen;
   }
 }
 h1 {
