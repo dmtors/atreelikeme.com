@@ -45,7 +45,7 @@ body {
         background-color: $color-dark;
         color: $color-light;
     }
-    #book-picture {
+    #blend-picture {
          mix-blend-mode: multiply;
     }
 }
@@ -63,7 +63,7 @@ body {
         background-color: $color-light;
         color: $color-dark;
     }
-    #book-picture {
+    #blend-picture {
          mix-blend-mode: screen;
     }
 }

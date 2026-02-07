@@ -42,8 +42,8 @@ html[data-theme=light] .button {
   background-color: #19120B;
   color: #ece4b3;
 }
-html #book-picture,
-html[data-theme=light] #book-picture {
+html #blend-picture,
+html[data-theme=light] #blend-picture {
   mix-blend-mode: multiply;
 }
 
@@ -62,7 +62,7 @@ html[data-theme=dark] .button {
   background-color: #ece4b3;
   color: #19120B;
 }
-html[data-theme=dark] #book-picture {
+html[data-theme=dark] #blend-picture {
   mix-blend-mode: screen;
 }
 
@@ -82,7 +82,7 @@ html[data-theme=dark] #book-picture {
     background-color: #ece4b3;
     color: #19120B;
   }
-  html:not([data-theme]) #book-picture {
+  html:not([data-theme]) #blend-picture {
     mix-blend-mode: screen;
   }
 }
